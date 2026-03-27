@@ -16,4 +16,8 @@ public class SubjectService {
     public Subject getSubjectDetails(int id){
          return subjectRepo.findById(id).orElseThrow(null);
     }
+
+    public Subject addSubject(Subject subject) {
+        return subjectRepo.save(subject);
+    }
 }
